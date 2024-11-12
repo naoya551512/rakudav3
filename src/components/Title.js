@@ -4,7 +4,7 @@ export const Title = () => {
   return (
     <div>
       <header>
-        <h1>Shin Code TodoList</h1>
+        <h1>Home</h1>
       </header>
     </div>
   );

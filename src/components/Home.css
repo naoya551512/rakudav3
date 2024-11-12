@@ -33,36 +33,6 @@ body {
 }
 
 
-.inputForm {
-  width: 80vh;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-.inputForm input {
-  width: 15rem;
-  height: 1.7rem;
-  padding: 0.5rem;
-  border: none;
-}
-
-.inputForm button {
-  padding: 0.38rem 0.5rem;
-  background: rgb(243, 240, 84);
-}
-
-.todoList {
-  width: 100vw;
-  margin: 2rem auto;
-}
-
-.todo {
-  margin: 0.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .completed {
   text-decoration: line-through;
