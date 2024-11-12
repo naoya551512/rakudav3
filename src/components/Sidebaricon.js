@@ -5,8 +5,8 @@ import Icon2 from "../images/icon3.png";
 function Sidebaricon() {
   return (
     <div className="Sidebaricon">
-      <img src={Icon} />
-      <img src={Icon2}/>
+      <img src={Icon} alt="Description of image"/>
+      <img src={Icon2} alt="Description of image"/>
 
     </div>
   );

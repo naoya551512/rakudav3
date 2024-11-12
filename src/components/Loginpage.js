@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';  // useNavigate をインポー�
 const Loginpage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, ] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
