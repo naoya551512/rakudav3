@@ -1,7 +1,7 @@
 import './Login.css';
 
-import Loginpage from "./Loginpage"
-import Sidebar from "./Sidebar";
+import Loginpage from "../components/Loginpage"
+import Sidebar from "../components/Sidebar";
 
 function Login() {
 

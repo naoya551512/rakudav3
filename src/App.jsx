@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Make from './components/Make';
+import Home from './page/Home';
+import Login from './page/Login';
+import Signup from './page/Signup';
+import Make from './page/Make';
 /*import App.css;*/
 
 function App () {

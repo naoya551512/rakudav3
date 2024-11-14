@@ -1,7 +1,7 @@
 import './Make.css';
 
-import MakepageUI from "./MakepageUI"
-import Sidebar from "./Sidebar";
+import MakepageUI from "../components/MakepageUI"
+import Sidebar from "../components/Sidebar";
 
 function Make() {
 

@@ -1,7 +1,7 @@
 import './Login.css';
 
-import Signuppage from "./Signuppage"
-import Sidebar from "./Sidebar";
+import Signuppage from "../components/Signuppage"
+import Sidebar from "../components/Sidebar";
 
 function Signup() {
 

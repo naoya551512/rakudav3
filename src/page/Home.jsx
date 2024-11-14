@@ -1,9 +1,9 @@
 import './Home.css';
 
 import "./Home.css";
-import { Homepage } from "./Homepage";
-import { Title } from "./Title";
-import Sidebar from "./Sidebar";
+import { Homepage } from "../components/Homepage";
+import { Title } from "../components/Title";
+import Sidebar from "../components/Sidebar";
 
 
  function Home() {

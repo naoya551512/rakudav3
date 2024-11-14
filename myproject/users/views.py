@@ -3,12 +3,18 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views import View
 from django.contrib.auth.models import User
+import json
 
 def signup(request):
+        if request.method == 'POST':
+            data = json.loads(request.body)
+            username = data.get('username')
+            password = data.get('password')
         
         # リクエストからデータを取得
-        username = request.POST.get('username')
-        password = request.POST.get('password')
+        # username = request.POST.get('username')
+        # password = request.POST.get('password')
+        print(username, password)
 
         if not username or not password:
             return JsonResponse({'message': 'ユーザー名とパスワードを入力してください'}, status=400)

@@ -12,6 +12,8 @@ const Signuppage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log(username, password);
+
     const response = await fetch('http://localhost:8000/signup/', {
       method: 'POST',
       headers: {
@@ -19,6 +21,8 @@ const Signuppage = () => {
       },
       body: JSON.stringify({ username, password }),
     });
+
+    console.log(response);
 
     const data = await response.json();
 
