@@ -1,0 +1,101 @@
+
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 2rem ;
+ }
+
+ .main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+
+.icons .fa-check {
+  padding: 0.487rem .5rem;
+  background: rgb(83, 164, 195);
+}
+
+.icons .fa-trash {
+  padding: 0.487rem .5rem;
+  background: rgb(197, 70, 81);
+}
+
+
+button {
+  border: none;
+}
+
+.Sidebar {
+  height: 1000px;
+  width: 250px;
+  background: #2d445d;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #3b627a;
+}
+
+.SidebarList #active {
+  background-color: #3b627a;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.Sidebaricon {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.Sidebaricon img {
+  width: 200px;
+}
+
+.Sidebaricon p {
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}

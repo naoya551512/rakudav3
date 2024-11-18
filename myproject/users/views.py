@@ -11,11 +11,8 @@ def signup(request):
             username = data.get('username')
             password = data.get('password')
         
-        # リクエストからデータを取得
-        # username = request.POST.get('username')
-        # password = request.POST.get('password')
-        print(username, password)
-
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({"message": "このユーザー名は既に使用されています。"}, status=400)
         if not username or not password:
             return JsonResponse({'message': 'ユーザー名とパスワードを入力してください'}, status=400)
 

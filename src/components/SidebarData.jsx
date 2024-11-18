@@ -1,35 +1,30 @@
 import React from "react";
 import HomeIcon from "@mui/icons-material/Home";
-import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
+import { Typography } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import LoginIcon from '@mui/icons-material/Login';
+import BuildIcon from '@mui/icons-material/Build';
 
 export const SidebarData = [
   {
-    title: "ホーム",
-    icon: <HomeIcon />,
+    title: <Typography sx={{ color: '#1976d2' ,marginTop: '19px'}}>ホーム</Typography>,  // 文字色を白に設定
+    icon: <HomeIcon sx={{ color: '#1976d2' ,marginTop: '19px'}}/>,
     link: "/home",
   },
   {
-    title: "作る",
-    icon: <AttachEmailIcon />,
+    title: <Typography sx={{ color: '#1976d2' ,marginTop: '19px'}}>作る</Typography>, // 文字色を白に設定
+    icon: <BuildIcon sx={{ color: '#1976d2' ,marginTop: '19px'}}/>,
     link: "/make",
   },
   {
-    title: "使い方",
-    icon: <HelpOutlineIcon />,
-    link: "/howto",
-  },
-  {
-    title: "編集",
-    icon: <EditIcon />,
+    title: <Typography sx={{ color: '#1976d2' ,marginTop: '19px'}}>編集</Typography>,  // 文字色を白に設定
+    icon: <EditIcon sx={{ color: '#1976d2' ,marginTop: '19px'}}/>,
     link: "/edit",
   },
   {
-    title: "ログイン",
-    icon: <HelpOutlineIcon />,
+    title: <Typography sx={{ color: '#1976d2' ,marginTop: '19px'}}>ログイン</Typography>, // 文字色を白に設定
+    icon: <LoginIcon sx={{ color: '#1976d2' ,marginTop: '19px'}}/>,
     link: "/login",
   },
-
 ];

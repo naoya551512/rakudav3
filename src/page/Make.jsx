@@ -1,7 +1,7 @@
 import './Make.css';
 
-import MakepageUI from "../components/MakepageUI"
-import Sidebar from "../components/Sidebar";
+import Makepage from "../components/Makepage"
+import Side from "../components/Side";
 
 function Make() {
 
@@ -10,9 +10,9 @@ function Make() {
       
         <div className="App">
           <div className="main">
-            <Sidebar /> 
-            <div id="MakepageUI" className="content">
-              <MakepageUI/>
+            <Side /> 
+            <div id="Makepage" className="content">
+              <Makepage/>
             </div>
           </div>
         </div>

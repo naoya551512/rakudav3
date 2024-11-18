@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   
   .App {
     width: 100%;
@@ -33,11 +28,11 @@
   
  
   #Make {
-    background: #ffffff  !important;
+    background: #ffffff  ;
 }
 
   .Sidebar {
-    height: 1000px;
+    height: 910px;
     width: 200px;
     background: #2d445d;
   }

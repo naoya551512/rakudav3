@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import './Signuppage.css';
+import styles from './Signuppage.module.css';
+
+
+
 
 const Signuppage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  //const navigate = useNavigate();
+  const [errorMessage,setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +30,8 @@ const Signuppage = () => {
     const data = await response.json();
 
     if (response.status === 200) {
-      alert('Login successful');
+      alert('アカウントが作成されました！');
+      navigate('/login');
       // Navigate to another page or reset form if needed
     } else {
       setErrorMessage(data.message);
@@ -35,44 +39,55 @@ const Signuppage = () => {
   };
 
   return (
-    <div className="signup-form">
-      <form onSubmit={handleSubmit}>
-        <Typography variant="h5" gutterBottom>新規会員登録</Typography>
+    <div className={styles.main}>
+    <div className={styles.back}>
+    <div className={styles.styledPaper}  >
+      
+      <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.buttonContainer}>
+      <Typography variant="h5" className={styles.loginPageTitle}>新規会員登録</Typography>
 
         <TextField
-          label="ユーザーネーム"
+          label="　ユーザーネーム"
           variant="standard"
+          className={styles.text}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          fullWidth
-          margin="normal"
         />
-
+        <br/>
         <TextField
-          label="パスワード"
-          variant="standard"
+          label="　パスワード"
           type="password"
+          variant="standard"
+          className={styles.text}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          fullWidth
-          margin="normal"
         />
-
+        
+        <div className={styles.errorContainer}>
         {errorMessage && (
-          <Typography color="error" variant="body2" align="center" margin="normal">
-            {errorMessage}
-          </Typography>
-        )}
-
+          
+            <Typography color="error" variant="body2" align="center">
+              {errorMessage}
+            </Typography>
+            
+          )}
+        </div>
         <Button 
           type="submit" 
           variant="contained" 
           color="primary" 
           fullWidth
+          className={styles.signupBtn}
         >
           登録
         </Button>
+        
+        </div>
+
       </form>
+    </div>
+    </div>
     </div>
   );
 };

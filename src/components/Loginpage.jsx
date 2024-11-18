@@ -1,7 +1,9 @@
+import styles from './Loginpage.module.css';
 import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@mui/material';
-import './Loginpage.css';
 import { useNavigate } from 'react-router-dom';  // useNavigate をインポート
+import Icon from "../images/login.png";
+
 
 const Loginpage = () => {
   const [username, setUsername] = useState('');
@@ -34,29 +36,40 @@ const Loginpage = () => {
   };
 
   return (
-    <div className="styled-paper">
-      <form className="form" onSubmit={handleLogin}>
-        <Typography variant="h5">ログイン</Typography>
+    <div className={styles.back}>
+    <div className={styles.styledPaper}  >
+      
+      <form className={styles.form} onSubmit={handleLogin}>
+      <div className={styles.buttonContainer}>
+      <Typography variant="h5" className={styles.loginPageTitle}>ログイン</Typography>
+      <img src={Icon} className={styles.logo} alt=""/>
+
         <TextField
           label="ユーザーネーム"
           variant="standard"
-          className="text"
+          className={styles.text}
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        <br></br>
         <TextField
           label="パスワード"
           type="password"
           variant="standard"
-          className="text"
+          className={styles.text}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <center><Button type="submit" className="login btn">ログイン</Button></center>
-        <center><Button className="signup btn" onClick={handleSignUpRedirect}>新規会員登録はこちら</Button></center>
-        {errorMessage && <Typography color="error">{errorMessage}</Typography>}
+        
+          <Button type="submit" className={styles.loginBtn}>ログイン</Button>
+          <Button className={styles.signupBtn} onClick={handleSignUpRedirect}>新規会員登録はこちら</Button>
+          {errorMessage && <Typography color="error">{errorMessage}</Typography>}
+        </div>
+
       </form>
     </div>
+    </div>
+
   );
 };
 

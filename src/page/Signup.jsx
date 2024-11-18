@@ -1,16 +1,16 @@
-import './Login.css';
+import styles from './Login.module.css';
 
 import Signuppage from "../components/Signuppage"
-import Sidebar from "../components/Sidebar";
+import Side from "../components/Side";
 
 function Signup() {
 
   
     return (
       
-      <div className="App">
+      <div className={styles.App}>
         <div className="main">
-          <Sidebar /> {/* サイドバー */}
+          <Side /> {/* サイドバー */}
           <div className="content">
             <Signuppage/>
           </div>

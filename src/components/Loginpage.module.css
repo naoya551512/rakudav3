@@ -1,0 +1,119 @@
+
+.back {
+  width: 435%;
+  height: 100%;
+  background-image: url('../images/Back.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+}
+
+.logo{
+  width: 130px;
+  position:absolute;
+  top:-65px;
+
+}
+
+.loginPageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 2rem;
+}
+
+
+/* フォームのスタイル */
+.form {
+  transform: translate(-13%, -0%);
+  background-color: white; 
+  width: 100%;
+  padding: 3rem; /* 内側の余白を追加 */
+  margin: 3rem ; /* 上下の余白を追加 */
+  border-radius: 10px; /* 角を丸くする */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+  height: 60vh;
+}
+
+/* テキストフィールドのスタイル */
+.text {
+  width: 100%;
+  margin-top: 0rem !important;
+  padding: 0.8rem;
+  
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+/* ボタンの共通スタイル */
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ボタンの親コンテナに中央揃えを適用 */
+.buttonContainer {
+  display: flex;
+  flex-direction: column; /* 縦並びに配置 */
+  align-items: center; /* 水平中央揃え */
+  justify-content: center; /* 垂直中央揃え */
+  margin-top: 3rem ;
+}
+
+/* ログインボタン */
+.loginBtn {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-top: 1.7rem!important;
+  margin-bottom: 2rem;
+  color: #fff;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  background-color: #1976d2;
+  padding: 0.3rem 1rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* サインアップボタン */
+.signupBtn {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  background-color: #fcfdff;
+  padding: 0.3rem 1rem;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* ホバー時のボタンスタイル */
+.loginBtn:hover, .signupBtn:hover {
+  color: #1976d2;
+  background-color: #fff;
+  border: 1px solid #1976d2;
+}
+
+
+/* エラーメッセージ */
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+

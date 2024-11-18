@@ -1,0 +1,217 @@
+/* Makepage全体のレイアウト */
+#content {
+    display: flex;
+    flex-direction: row;
+    padding: rem;
+    background-color: #f5f5f5;
+    position: relative;
+    margin-left: 10px;
+}
+
+/* キャンバスのスタイル */
+#main {
+    padding: 0rem;
+    flex: 1;
+    margin-right: rem;
+    margin-left: 40px;
+}
+
+#floorPlan {
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+/* コンテナボックスのスタイル */
+.container {
+    margin-top: 16px; /* mt: 2と同じような余白 */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* fullWidthと同様 */
+    margin-top: 16px;
+}
+
+.input-label {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+    display: block; /* ラベルがテキストフィールドの上に表示されるように */
+  }
+
+  .text-input {
+    width: 95%;
+    padding: 10px;
+    background-color: white;
+    color: black; /* 入力テキストの色 */
+    border: 2px solid #ADD8E6; /* 枠線の色 */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; /* フォーカス時のアウトラインを消す */
+    transition: border-color 0.3s ease; /* 枠線の色変更にアニメーションを追加 */
+  }
+
+  .text-input:focus {
+    border-color: #00BFFF; /* フォーカス時の枠線色 */
+  }
+
+  .text-input::placeholder {
+    color: #999; /* プレースホルダーテキストの色 */
+  }
+
+  /* ホバー時に枠線を変更 */
+  .text-input:hover {
+    border-color: #87CEFA;
+  }
+
+/* タイトルのスタイル */
+.title {
+    font-size: 0.875rem; /* variant="subtitle1"と似たフォントサイズ */
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 4px;
+}
+
+/* セレクトボックスのスタイル */
+.select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    width: 100%; /* 全幅を取る */
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: white;
+}
+
+/* ホバー時のスタイル */
+.select:hover {
+    border-color: rgba(0, 0, 0, 0.87);
+}
+
+/* フォーカス時のスタイル */
+.select:focus {
+    outline: none;
+    border-color: #3f51b5; /* MUIのデフォルトの強調色 */
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+
+/* サイドナビゲーション */
+nav {
+    flex: 0.4;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    right: 200px;
+}
+
+nav h6 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* フォームラベルのスタイル */
+nav label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+    display: block;
+}
+
+/* テキスト入力や選択メニューのスペース */
+nav .MuiBox-root {
+    margin-bottom: 1.5rem;
+}
+
+/* 色入力のスタイル */
+#roomColor {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+/* ボタンのスタイル */
+button, .MuiButton-root {
+    margin-right: 8px;
+    margin-top: 8px;
+    font-weight: bold;
+
+    
+}
+
+button#generateQR, button#editbutton, button#applyEditData, button#resizebutton{
+    color: #fff;
+    background-color: #1976d2;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+    border: 1px solid #ffffff;
+}
+
+button#generateQR:hover, button#editbutton:hover, button#applyEditData:hover, button#resizebutton:hover{
+    background-color: #1565c0;
+}
+
+button#sizedown, button#sizeup, button#rotate, button#deleteRoom {
+    background-color: #eeeeee;
+    color: #333;
+    border-radius: 4px;
+    padding: 0.45rem 0.9rem;
+    transition: background-color 0.3s;
+    border: 1px solid #71777c;
+}
+
+button#sizedown:hover, button#sizeup:hover, button#rotate:hover, button#deleteRoom:hover {
+    background-color: #e0e0e0;
+    
+}
+
+/* テキストエリアのスタイル */
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+
+/* コピー、クリア、ペーストボタンのスタイル */
+#copyButton, #clearButton, #pasteButton {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    color: #1976d2;
+    border: 1px solid #1976d2;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0.4rem 0.9rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#copyButton:hover, #clearButton:hover, #pasteButton:hover {
+    color: #fff;
+    background-color: #6e95bb;
+}
+
+/* QRコードエリア */
+#qrCode, #generatedLink {
+    margin-top: 2rem;
+}
+
+/* テキストフィールドのデザイン調整 */
+.MuiTextField-root, .MuiSelect-root {
+    margin-top: 1rem;
+}

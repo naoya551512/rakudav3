@@ -1,24 +1,24 @@
-import './Login.css';
-
+import './Login.module.css';
+import Side from "../components/Side";
 import Loginpage from "../components/Loginpage"
-import Sidebar from "../components/Sidebar";
+
 
 function Login() {
 
   
-    return (
+  return (
       
-      <div className="App">
-        <div className="main">
-          <Sidebar /> {/* サイドバー */}
-          <div className="content">
-            <Loginpage/>
-          </div>
+    <div className="App">
+      <div className="main">
+        <Side /> 
+        <div id="Makepage" className="content">
+          <Loginpage/>
         </div>
       </div>
+    </div>
+
+    
+  );
+}
   
-      
-    );
-  }
-  
-  export default Login;
+export default Login;

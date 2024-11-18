@@ -1,28 +1,17 @@
-import './Home.css';
+import styles from "./Login.module.css";
+import Homepage from "../components/Homepage";
+import Side from "../components/Side";
 
-import "./Home.css";
-import { Homepage } from "../components/Homepage";
-import { Title } from "../components/Title";
-import Sidebar from "../components/Sidebar";
-
-
- function Home() {
-  
-
+function Home() {
   return (
-    
-    <div className="App">
-      <div className="main">
-        <Sidebar /> {/* サイドバー */}
-        <div className="content">
-          <Title />
+    <div className={styles.App}>
+      <div className={styles.main}>
+        <Side />
+        <div className={styles.content}>
           <Homepage />
-          
         </div>
       </div>
     </div>
-
-    
   );
 }
 
