@@ -11,6 +11,9 @@ function Side() {
 
   // activeIndexが変更されたときにlocalStorageに保存
   useEffect(() => {
+    if (window.location.pathname === "/"||window.location.pathname === "home") {
+      setActiveIndex(0);  // 必要なパスでリセットする
+    }
     localStorage.setItem("activeIndex", JSON.stringify(activeIndex));
   }, [activeIndex]);
 
