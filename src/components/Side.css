@@ -15,7 +15,7 @@
   .navigation {
     position: relative;
     /* height: 500px; 最初はこれ*/
-    height: 100vh;
+    height: 100%;
     /* width: 300px; 最初はこれ*/
     width: 70px;
     background-color: #ffffff;

@@ -307,7 +307,7 @@ const Makepage = () => {
         });
     
     
-        function addLineBreaks(text, interval = 40) {
+        function addLineBreaks(text, interval = 10) {
             const regex = new RegExp(`(.{${interval}})`, 'g');
             return text.replace(regex, '$1\n');
         }
