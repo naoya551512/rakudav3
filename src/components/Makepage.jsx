@@ -10,28 +10,27 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 const Makepage = () => {
     const [tourSteps] = useState([
         {
-            target: '#floorPlan', // 形状セレクトボックスに対するツアーステップ
+            target: '#floorPlan', 
             content: '背景が白の時にクリックすると、選択した図形が描画されます。',
             disableBeacon: true, 
         },
         {
-            target: '#textInput', // テキスト入力欄
+            target: '#textInput', 
             content: '形状でテキストが選択されているとき、ここに入力したテキストが表示されます',
         },
         {
-            target: '#editbutton', // 編集ボタン
+            target: '#editbutton', 
             content: '編集モードに切り替えるボタンです。Spaceキーでも切り替えることができます。編集モード中は背景が黄色になり、図形の移動や削除、大きさの微調整、回転ができます',
         },
         {
-            target: '#resizebutton', // サイズ変更ボタン
+            target: '#resizebutton', 
             content: 'サイズ変更モードに切り替えるボタンです。Eキーでも切り替えることができます。サイズ変更モード中は背景が赤色になり、図形の大きさをマウスで変えることができます。',
         },
         {
-            target: '#editdata', // 編集データ表示欄
+            target: '#editdata', 
             content: 'リンクを生成するとここに編集データが表示されます。それを下のボックスに入力すると、続きから作成できます',
         },
     ]);
-
         const [isTourRunning, setIsTourRunning] = useState(false);
         const startTour = () => {
         setIsTourRunning(true);
@@ -249,7 +248,6 @@ const Makepage = () => {
             }
         });
     
-        //document.getElementById('generateQR').off('click');
         document.getElementById('generateQR').addEventListener('click', function() {
             const button = document.getElementById('generateQR');
             button.disabled = true;
@@ -274,7 +272,6 @@ const Makepage = () => {
             }
         
             try {
-                // JSON.parseでエラーが発生する可能性があるので、try-catchで囲む
                 rooms = JSON.parse(inputData);
         
                 if (!Array.isArray(rooms) || rooms.length === 0) {
@@ -316,15 +313,15 @@ const Makepage = () => {
     
             const inputBox = document.getElementById('textInput');
             if (document.activeElement === inputBox) {
-                return; // テキストボックスがフォーカスされている場合、何もしない
+                return; 
             }
-            if (event.key === 'r') { // rキーが押されたとき
+            if (event.key === 'r') {
                 if (selectedRoom) {
                     selectedRoom.rotation = (selectedRoom.rotation || 0) + Math.PI / 4;
                     redrawRooms();
                 }   
             }
-            if (event.key === ' ') { // スペースキーが押されたとき
+            if (event.key === ' ') { 
                 editingMode = !editingMode;
                 if (editingMode) {
                     resize = false;
@@ -333,16 +330,16 @@ const Makepage = () => {
                     canvas.style.backgroundColor = 'white';
                     selectedRoom = null;
                 }
-                event.preventDefault(); // スペースキーによるスクロールを防ぐ
+                event.preventDefault(); 
             }
-            if (event.key === 'q') { // qキーが押されたとき
+            if (event.key === 'q') { 
                 if (selectedRoom) {
                     rooms = rooms.filter(room => room !== selectedRoom);
                     selectedRoom = null;
                     redrawRooms();
                 }
             }
-            if (event.key === 'e') { // qキーが押されたとき
+            if (event.key === 'e') { 
                 resize = !resize;
                 if (resize) {
                     editingMode = false;
@@ -358,9 +355,9 @@ const Makepage = () => {
       
   return (
     
-    <div id="content"> {/*2分割用の全体div*/}
+    <div id="content"> 
       <div id="main"> 
-        <canvas id="floorPlan" width="940" height="900"></canvas> {/* 半分のcanvas部分 */}
+        <canvas id="floorPlan" width="940" height="900"></canvas> 
       </div>
       <nav>
         <div>
@@ -368,11 +365,11 @@ const Makepage = () => {
         <div class="container">
         <Button 
             onClick={startTour}
-            startIcon={<HelpOutlineIcon />} // アイコンをボタンの前に配置
+            startIcon={<HelpOutlineIcon />} 
             variant="contained"
             sx={{ backgroundColor: 'blue' }}
         >
-            <Typography sx={{ color: 'white' }}>使い方</Typography> {/* 文字色を白に設定 */}
+            <Typography sx={{ color: 'white' }}>使い方</Typography> 
         </Button>
             <label class="title">形状:</label>
             <select id="shape" class="select">
@@ -416,23 +413,21 @@ const Makepage = () => {
         <button id="applyEditData">適用</button>
         <button id="clearButton">クリア</button>
         <button id="pasteButton">ペースト</button>
-        
 
         <div id="qrCode"></div>
         <div id="generatedLink"></div>
         <div className="Makepage">
         <div>
-        
-      
+    
       <Joyride
-        steps={tourSteps}         // ツアーのステップを設定
-        continuous={true}         // 継続的なツアー
-        showSkipButton={true}     // スキップボタンを表示
-        showProgress={true}       // 進捗バーを表示
-        run={isTourRunning}       // ツアーを実行するかどうか
+        steps={tourSteps}         
+        continuous={true}         
+        showSkipButton={true}     
+        showProgress={true}       
+        run={isTourRunning}       
         callback={({ status }) => {
           if (status === 'finished' || status === 'skipped') {
-            setIsTourRunning(false); // ツアーが終了したらステータスを更新
+            setIsTourRunning(false); 
           }
         }}
       />

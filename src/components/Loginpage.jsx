@@ -1,9 +1,8 @@
 import styles from './Loginpage.module.css';
 import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';  // useNavigate をインポート
+import { useNavigate } from 'react-router-dom';  
 import Icon from "../images/login.png";
-
 
 const Loginpage = () => {
   const [username, setUsername] = useState('');
@@ -32,7 +31,7 @@ const Loginpage = () => {
   };
 
   const handleSignUpRedirect = () => {
-    navigate('/signup');  // 新規会員登録ページに遷移
+    navigate('/signup');  
   };
 
   return (

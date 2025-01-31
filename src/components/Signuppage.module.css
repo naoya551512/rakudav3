@@ -7,15 +7,13 @@ html, body {
   box-sizing: border-box;
 }
 
-
-/* 中央揃えの親コンテナ */
 .main {
   display: flex;
-  justify-content: center; /* 水平方向に中央揃え */
-  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: center; 
+  align-items: center; 
   
-  width: 96.3vw; /* ビューポート全幅 */
-  height: 100vh; /* ビューポート全高 */
+  width: 96.3vw; 
+  height: 100vh; 
 
   margin: 0;
   padding: 0;
@@ -24,9 +22,9 @@ html, body {
 
 
 .back {
-  flex: 1 2 auto; /* フレックスアイテムとして振る舞わせる */
+  flex: 1 2 auto; 
   width: 150%;
-  height: 100vh; /* ビューポート全体をカバー */
+  height: 100vh; 
   background-color: gray;
   background-size: cover;
   background-position: center center;
@@ -45,53 +43,51 @@ html, body {
 }
 
 .errorContainer {
-  min-height: 50px; /* エラーメッセージ用のスペースを確保 */
+  min-height: 50px; 
   padding: 0.5rem;
-  background-color: transparent; /* 初期状態では背景色を透明に */
+  background-color: transparent; 
   border-radius: 5px;
-  color: #721c24; /* エラーメッセージの文字色（暗い赤） */
-  font-weight: bold; /* 文字を太字にする */
+  color: #721c24; 
+  font-weight: bold; 
   margin-bottom: 1rem;
-  transition: background-color 0.3s ease; /* 背景色のアニメーション */
+  transition: background-color 0.3s ease; 
   font-size: 1.3rem;
 }
 
-/* エラーメッセージが表示されると背景色を変更 */
 .errorContainer p {
-  background-color: #f8d7da; /* エラーメッセージ用の背景色 */
+  background-color: #f8d7da; 
   margin: 0;
 }
 
 
 .styledPaper {
   margin-left: 6rem;
-  max-width: 500px; /* フォームの最大幅 */
-  width: 100%; /* 幅は100%に設定 */
+  max-width: 500px; 
+  width: 100%; 
   padding: 20px;
   height: auto;
-  background-image: url('../images/form4.png'); /* 背景画像 */
-  background-size: cover; /* 画像をフォームのサイズに合わせてカバー */
-  background-position: center; /* 背景画像を中央に配置 */
+  background-image: url('../images/form4.png'); 
+  background-size: cover; 
+  background-position: center; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box; /* パディングを含めた幅 */
+  box-sizing: border-box; 
   align-items: center;
 }
 
 .form {
-  width: 100%; /* フォームの幅を親に合わせる */
+  width: 100%; 
   min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  box-sizing: border-box; /* パディングを含めた幅 */
+  box-sizing: border-box; 
   
 }
 
-/* テキストフィールドのスタイル */
 .text {
   background-color: #fff;
   width: 100%;
@@ -102,9 +98,6 @@ html, body {
   box-sizing: border-box;
 }
 
-
-
-/* ボタンの共通スタイル */
 .btn {
   width: 100%;
   padding: 1rem;
@@ -117,18 +110,15 @@ html, body {
   text-align: center;
 }
 
-/* ボタンの親コンテナに中央揃えを適用 */
 .buttonContainer {
   width: 100%; 
   display: flex;
-  flex-direction: column; /* 縦並びに配置 */
-  align-items: center; /* 水平中央揃え */
-  justify-content: center; /* 垂直中央揃え */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   margin-top: 3rem ;
 }
 
-
-/* サインアップボタン */
 .signupBtn {
   font-size: 1.1rem;
   margin-top: 5rem;
@@ -139,15 +129,12 @@ html, body {
   transition: color 0.3s, background-color 0.3s;
 }
 
-/* ホバー時のボタンスタイル */
 .loginBtn:hover, .signupBtn:hover {
   color: #1976d2;
   background-color: #fff;
   border: 1px solid #1976d2;
 }
 
-
-/* エラーメッセージ */
 .error {
   color: red;
   margin-top: 1rem;

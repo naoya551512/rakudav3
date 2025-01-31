@@ -32,7 +32,6 @@ const Signuppage = () => {
     if (response.status === 200) {
       alert('アカウントが作成されました！');
       navigate('/login');
-      // Navigate to another page or reset form if needed
     } else {
       setErrorMessage(data.message);
     }

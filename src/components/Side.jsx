@@ -3,16 +3,14 @@ import "./Side.css";
 import { SidebarData } from "./SidebarData";
 
 function Side() {
-  // 初期状態をlocalStorageから取得する
   const [activeIndex, setActiveIndex] = useState(() => {
     const savedIndex = localStorage.getItem("activeIndex");
-    return savedIndex ? JSON.parse(savedIndex) : 0;  // localStorageから取得、なければ0に設定
+    return savedIndex ? JSON.parse(savedIndex) : 0;  
   });
 
-  // activeIndexが変更されたときにlocalStorageに保存
   useEffect(() => {
     if (window.location.pathname === "/"||window.location.pathname === "home") {
-      setActiveIndex(0);  // 必要なパスでリセットする
+      setActiveIndex(0);  
     }
     localStorage.setItem("activeIndex", JSON.stringify(activeIndex));
   }, [activeIndex]);
@@ -23,8 +21,8 @@ function Side() {
         {SidebarData.map((item, index) => (
           <li
             key={index}
-            className={`list ${index === activeIndex ? "active" : ""}`}  // activeが正しく付けられているか
-            onClick={() => setActiveIndex(index)}  // クリックでactiveIndexが更新される
+            className={`list ${index === activeIndex ? "active" : ""}`}  
+            onClick={() => setActiveIndex(index)}  
           >
             <a href={item.link}>
               <span className="icon">{item.icon}</span>

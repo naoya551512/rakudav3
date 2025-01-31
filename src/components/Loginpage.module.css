@@ -1,4 +1,3 @@
-
 .back {
   width: 435%;
   height: 100%;
@@ -28,20 +27,17 @@
   margin-bottom: 2rem;
 }
 
-
-/* フォームのスタイル */
 .form {
   transform: translate(-13%, -0%);
   background-color: white; 
   width: 100%;
-  padding: 3rem; /* 内側の余白を追加 */
-  margin: 3rem ; /* 上下の余白を追加 */
-  border-radius: 10px; /* 角を丸くする */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+  padding: 3rem; 
+  margin: 3rem ; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   height: 60vh;
 }
 
-/* テキストフィールドのスタイル */
 .text {
   width: 100%;
   margin-top: 0rem !important;
@@ -51,9 +47,6 @@
   box-sizing: border-box;
 }
 
-
-
-/* ボタンの共通スタイル */
 .btn {
   width: 100%;
   padding: 1rem;
@@ -66,16 +59,14 @@
   text-align: center;
 }
 
-/* ボタンの親コンテナに中央揃えを適用 */
 .buttonContainer {
   display: flex;
-  flex-direction: column; /* 縦並びに配置 */
-  align-items: center; /* 水平中央揃え */
-  justify-content: center; /* 垂直中央揃え */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   margin-top: 3rem ;
 }
 
-/* ログインボタン */
 .loginBtn {
   font-size: 0.9rem;
   margin-right: 0.5rem;
@@ -89,7 +80,6 @@
   transition: color 0.3s, background-color 0.3s;
 }
 
-/* サインアップボタン */
 .signupBtn {
   font-size: 0.9rem;
   margin-right: 0.5rem;
@@ -103,15 +93,12 @@
   transition: color 0.3s, background-color 0.3s;
 }
 
-/* ホバー時のボタンスタイル */
 .loginBtn:hover, .signupBtn:hover {
   color: #1976d2;
   background-color: #fff;
   border: 1px solid #1976d2;
 }
 
-
-/* エラーメッセージ */
 .error {
   color: red;
   margin-top: 1rem;
